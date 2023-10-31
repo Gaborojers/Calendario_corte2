@@ -1,0 +1,108 @@
+/* ver-citas.module.css */
+.container {
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .pagina {
+    height: 100vh; /* Establece un alto mínimo del 100% del alto de la ventana */
+    display: flex; /* Para asegurarse de que ocupe todo el alto si el contenido no es suficiente */
+    flex-direction: column; /* Para alinear el contenido de arriba a abajo */
+}  
+  
+  .h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    position: relative;
+    top: 50px;
+    left: 200px;
+  }
+  
+  .ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .citas {
+    margin-bottom: 20px;
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .p {
+    margin: 0;
+  }
+
+  /* Estilos para las fechas */
+.fechaGroup {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #efefef;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  /* Estilos para el título de las citas */
+  .cita p:first-child {
+    font-weight: bold;
+  }
+  
+  /* Estilos para las fechas y horas */
+  .cita p:nth-child(odd) {
+    color: #555;
+  }
+  
+  /* En tu archivo CSS */
+/* Estilos para el contenedor del buscador */
+.search_container {
+  position: relative;
+  max-width: 400px;
+  margin: 0 auto;
+  left: 300px;
+}
+
+/* Estilos para el campo de búsqueda */
+.search_input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.search_input:focus {
+  border-color: #4285f4; /* Color azul similar a Google */
+}
+
+/* Estilos para el ícono de búsqueda */
+.search_icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 10px;
+  color: #777;
+  cursor: pointer;
+}
+
+/* Estilos para el ícono de búsqueda cuando se enfoca */
+.search_icon:focus {
+  color: #4285f4;
+}
+
+.boton {
+  position: relative;
+  left: 100px;
+  top: -50px;
+}
+
+.icono{
+  width: 30px;
+  height: auto;
+}

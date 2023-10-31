@@ -1,0 +1,57 @@
+/* En un archivo de estilos CSS o en un componente de estilos, como module.css */
+
+/* Estilo para el contenedor principal */
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+    top: 200px;
+  }
+
+  .pagina {
+    height: 100vh; /* Establece un alto mínimo del 100% del alto de la ventana */
+    display: flex; /* Para asegurarse de que ocupe todo el alto si el contenido no es suficiente */
+    flex-direction: column; /* Para alinear el contenido de arriba a abajo */
+}  
+  
+  /* Estilo para el título */
+  .h1 {
+    font-size: 24px;
+    margin: 0 0 20px;
+  }
+  
+  /* Estilo para los campos de entrada de texto */
+  .label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  .input[type="text"],
+  .inputTime[type="time"],
+  .textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  /* Estilo para el botón */
+  .button {
+    background-color: #4285f4;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .button:hover {
+    background-color: #357ae8;
+  }
+  
