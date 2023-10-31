@@ -7,10 +7,6 @@ import { useRouter } from 'next/router';
 import Link from 'next/link';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
-import IconButton from '@mui/material/IconButton';
-import GetAppIcon from '@mui/icons-material/GetApp';
-import jsPDF from 'jspdf';
-
 import styles from '../styles/Calendario.module.css';
 
 const CalendarioMensual = () => {
