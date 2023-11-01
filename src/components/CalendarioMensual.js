@@ -7,10 +7,6 @@ import { useRouter } from 'next/router';
 import Link from 'next/link';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
-import IconButton from '@mui/material/IconButton';
-import GetAppIcon from '@mui/icons-material/GetApp';
-import jsPDF from 'jspdf';
-
 import styles from '../styles/Calendario.module.css';
 
 const CalendarioMensual = () => {
@@ -28,7 +24,6 @@ const CalendarioMensual = () => {
 
   useEffect(() => {
     const storedAppointments = JSON.parse(localStorage.getItem('appointments')) || [];
-    console.log('Citas almacenadas:', storedAppointments);
     setAppointments(storedAppointments);
   }, []);
 
@@ -41,6 +36,11 @@ const CalendarioMensual = () => {
 
     return () => clearInterval(interval);
   }, []);
+
+  // Esta función se llamará cuando se edite una cita y se guarde.
+  const handleAppointmentChange = (updatedAppointments) => {
+    setAppointments(updatedAppointments);
+  };
 
   const handleDateClick = (arg) => {
     const selectedDate = arg.dateStr;
@@ -82,7 +82,9 @@ const CalendarioMensual = () => {
         );
       });
 
+      // Actualiza las citas y refleja el cambio en el calendario
       setAppointments(updatedAppointments);
+
       localStorage.setItem('appointments', JSON.stringify(updatedAppointments));
       handleCloseMenu();
     }
@@ -123,6 +125,7 @@ const CalendarioMensual = () => {
           contentClassNames={[styles.customContent]}
           dayCellClassNames={[styles.customDayCell]}
           eventClassNames={[styles.customEvent]}
+          eventChange={handleAppointmentChange}
         />
       </div>
       <Menu
